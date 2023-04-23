@@ -16,6 +16,22 @@ void task1() {
     // Обчислення виразів з використанням побітових операцій
     // Calculation of expressions using bitwise operations 
     cout << " Calculation of expressions using bitwise operations  \n";
+    int a, b, c, d;
+    double Answer;
+    cout << "Input a: ";
+    cin >> a;
+    cout << "Input b: ";
+    cin >> b;
+    cout << "Input c: ";
+    cin >> c;
+    cout << "Input d: ";
+    cin >> d;
+
+    Answer = ((a + (a << 4) + ((c << 8) + (c << 5) + (c << 4) + (c << 3))) >> 5) - ((b << 7) - (b << 3)) + ((d << 7) - d);
+    cout << "Answer: " << Answer << endl;
+    cout << endl;
+    cin.get();
+    return;
 }
 
 void task2()
@@ -23,21 +39,6 @@ void task2()
     // Шифрування даних з використання побітових операцій 
     // Data encryption using bitwise operations
     cout << " Data encryption using bitwise operations  \n";
-
-}
-
-void task3()
-{
-    // Шифрування даних з використання стуктур з бітовими полями 
-    // Data encryption using structures with bit fields
-    cout << "  Data encryption using structures with bit fields \n";
-}
-
-
-void task4()
-{   // Задача із використання побітових операцій
-    // The problem of using bitwise operations
-    cout << " Data encryption using structures with bit fields \n";
 
 }
 
