@@ -4,7 +4,11 @@
 #include <ctime>
 
 
-#include "Task1.h"
+#include "Task1lab7.h"
+#include "Task2lab7.h"
+#include "Task3lab7.h"
+#include "Task4lab7.h"
+
 
 using namespace std;
 
@@ -38,6 +42,72 @@ void menutask1()
     std::cin.get();
 }
 
+void menutask2()
+{
+    const int size = 5;
+    const char* arr[size] = { "first", "second", "third", "fourth", "fifth" };
+
+    bubbleSort(arr, size);
+    std::cout << "Sort mas: ";
+    for (int i = 0; i < size; ++i) {
+        std::cout << arr[i] << " ";
+    }
+    std::cout << std::endl;
+
+    // Пошук елемента "first"
+    const char* key = "first";
+    int index = binarySearch(arr, size, key);
+    if (index != -1) {
+        std::cout << "Element " << key << " find on the position: " << index << std::endl;
+    }
+    else {
+        std::cout << "Element " << key << " dont find" << std::endl;
+    }
+}
+
+void menutask3()
+{
+    Matrix<int> mat1(2, 2);
+    mat1[0][0] = 1;
+    mat1[0][1] = 2;
+    mat1[1][0] = 3;
+    mat1[1][1] = 4;
+
+    Matrix<int> mat2(2, 2);
+    mat2[0][0] = 5;
+    mat2[0][1] = 6;
+    mat2[1][0] = 7;
+    mat2[1][1] = 8;
+
+    // Додавання матриць
+    Matrix<int> mat3 = mat1 + mat2;
+
+    // Виведення результату
+    for (int i = 0; i < mat3.getRow(); ++i) {
+        for (int j = 0; j < mat3.getCol(); ++j) {
+            std::cout << mat3[i][j] << " ";
+        }
+        std::cout << std::endl;
+    }
+   
+}
+
+
+void menutask4()
+{
+    List<int> myList;
+    myList.add(1);
+    myList.add(2);
+    myList.add(3);
+
+    // Прохід по списку за допомогою ітератора
+    List<int>::ListIterator it = myList.begin();
+    while (it.hasNext()) {
+        std::cout << it.next() << " ";
+    }
+    std::cout << std::endl;
+}
+
 int main()
 {
 
@@ -55,9 +125,9 @@ int main()
 
         switch (ch) {
         case '1': menutask1();   break;
-        case '2': //menutask2();   break;
-        case '3': //menutask3();   break;
-        case '4': //menutask4();   break;
+        case '2': menutask2();   break;
+        case '3': menutask3();   break;
+        case '4': menutask4();   break;
         case '5': return 0;
         }
         cout << " Press any key and enter\n";

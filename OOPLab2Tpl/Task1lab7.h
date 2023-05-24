@@ -1,3 +1,4 @@
+#include <string.h>
 
 template <typename T>
 T findMinimum(T* array, int size) {
@@ -10,7 +11,7 @@ T findMinimum(T* array, int size) {
     return min;
 }
 
-// Специфікація функції-шаблон для типу char*
+
 template <>
 const char* findMinimum<const char*>(const char** array, int size) {
     const char* min = array[0];
