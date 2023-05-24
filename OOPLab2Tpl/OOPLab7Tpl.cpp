@@ -26,7 +26,7 @@ void menutask1()
 
     // Введення початкових даних використовуючи датчик випадкових чисел
     std::srand(std::time(0));
-    size = 5; // Задаємо розмір масиву
+    size = 5; 
     int* randomArray = new int[size];
     for (int i = 0; i < size; i++) {
         randomArray[i] = std::rand() % 100; // Генеруємо випадкове число в діапазоні 0-99
